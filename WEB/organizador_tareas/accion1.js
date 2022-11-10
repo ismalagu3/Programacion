@@ -1,36 +1,44 @@
 $(function(){
 
-function tareas (nombre, persona) {
-    tareas.nombre = make;
-    this.persona = model;
-  }
+let tarea
 
-    $("#boton_select").on("click", function(e){
+    $("#select").on("change", function(e){
 
         event.preventDefault()
-        var select = $("select").val()
-
-        console.log(select)
+        let select = $("select").val()
 
         if(select == "ver"){
             $("#ver").addClass("habilitado")
             $("#insertar").addClass("deshabilitado").removeClass("habilitado")
+            ver_tarea()
         }
         else if(select == "insertar"){
             $("#insertar").addClass("habilitado")
             $("#ver").addClass("deshabilitado").removeClass("habilitado")
+            agregar_tarea()
         }
         else{
             $("#centro").addClass("deshabilitado")
         }
     })
 
-    $("#boton_agregar").on("click", function(e){
-        event.preventDefault()
-        var tarea = $("#tarea").val()
-        console.log(tarea);
+    function agregar_tarea(){
+        $("#boton_agregar").on("click", function(e){
+            event.preventDefault()
+            tarea = $("#tarea").val()
+            console.log(tarea)
+            tareas(tarea)
+        })
+    }
 
-    })
+    function ver_tarea(){
+        $("#ver").html("<p>"+tareas.Tarea+"</p>")
+    }
+
+    function tareas (tarea) {
+        tareas.Tarea = tarea
+      }
+
 })
 
 //hay que crear una página de login, registrar las cookies y jugar con eso
