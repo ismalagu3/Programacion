@@ -1,0 +1,25 @@
+:root{
+    background-color: gray;
+    color:white;
+    text-align: center;
+
+}
+
+main{
+    padding: 1%;
+}
+
+div{
+    margin: 0 auto;
+    padding: 3%;
+    width: 15%;
+    border: 1px solid white;
+}
+
+.deshabilitado{
+    display: none;
+}
+
+.habilitado{
+    display: block;
+}
