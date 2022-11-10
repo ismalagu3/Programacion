@@ -10,16 +10,20 @@ main{
 }
 
 div{
-    margin: 0 auto;
+    margin: 5% auto;
     padding: 3%;
-    width: 15%;
+    width: 70%;
     border: 1px solid white;
+}
+
+input{
+    width: 90%;
 }
 
 .deshabilitado{
     display: none;
 }
 
-.habilitado{
+.habilitado{    
     display: block;
 }
