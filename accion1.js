@@ -26,6 +26,7 @@ let tarea
         $("#boton_agregar").on("click", function(e){
             event.preventDefault()
             tarea = $("#tarea").val()
+            $("#tarea").val("")
             console.log(tarea)
             tareas(tarea)
         })
