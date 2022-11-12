@@ -27,3 +27,7 @@ input{
 .habilitado{    
     display: block;
 }
+
+#ver>p{
+    border: solid 2px white;
+}
