@@ -1,7 +1,4 @@
 $(function(){
-
-let tarea
-
     $("#select").on("change", function(e){
 
         event.preventDefault()
@@ -16,30 +13,15 @@ let tarea
             $("#insertar").addClass("habilitado")
             $("#ver").addClass("deshabilitado").removeClass("habilitado")
             agregar_tarea()
+            $("#boton_agregar").on("click", function(e){
+                event.preventDefault()
+                $("#tarea").val("")
+            })
         }
         else{
             $("#centro").addClass("deshabilitado")
         }
     })
-
-    function agregar_tarea(){
-        $("#boton_agregar").on("click", function(e){
-            event.preventDefault()
-            tarea = $("#tarea").val()
-            $("#tarea").val("")
-            console.log(tarea)
-            tareas(tarea)
-        })
-    }
-
-    function ver_tarea(){
-        $("#ver").html("<p>"+tareas.Tarea+"</p>")
-    }
-
-    function tareas (tarea) {
-        tareas.Tarea = tarea
-      }
-
 })
 
 //hay que crear una página de login, registrar las cookies y jugar con eso
