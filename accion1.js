@@ -8,13 +8,14 @@ $(function(){
             $("#ver").addClass("habilitado")
             $("#insertar").addClass("deshabilitado").removeClass("habilitado")
             $("p").on("click",function(e){
+                let texto = $(e.currentTarget).text()
                 $(e.currentTarget).addClass("deshabilitado")
+                $.post("completada.php",{texto:texto})
             })
         }
         else if(select == "insertar"){
             $("#insertar").addClass("habilitado")
             $("#ver").addClass("deshabilitado").removeClass("habilitado")
-            agregar_tarea()
             $("#boton_agregar").on("click", function(e){
                 event.preventDefault()
                 $("#tarea").val("")
@@ -27,3 +28,4 @@ $(function(){
 })
 
 //hay que crear una página de login, registrar las cookies y jugar con eso
+//revisar que se envía correctamente el texto al php
