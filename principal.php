@@ -37,7 +37,7 @@
         <article id="ver" class="deshabilitado">
                 <?php
                     $mysqli=new mysqli("sql7.freemysqlhosting.net","sql7564092","SlyBea9HlB","sql7564092");
-                    $res=$mysqli->query("select tarea from tarea");
+                    $res=$mysqli->query("select tarea from tarea where completada like ("")");
                     $fila=$res->fetch_assoc();
 
                     while($fila){

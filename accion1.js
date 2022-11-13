@@ -1,4 +1,5 @@
 $(function(){
+    
     $("#select").on("change", function(e){
         event.preventDefault()
         let select = $("select").val()
@@ -6,7 +7,9 @@ $(function(){
         if(select == "ver"){
             $("#ver").addClass("habilitado")
             $("#insertar").addClass("deshabilitado").removeClass("habilitado")
-            ver_tarea()
+            $("p").on("click",function(e){
+                $(e.currentTarget).addClass("deshabilitado")
+            })
         }
         else if(select == "insertar"){
             $("#insertar").addClass("habilitado")
