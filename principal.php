@@ -27,10 +27,10 @@
 
     <section id="centro">
         <article id="insertar" class="deshabilitado">
-            <form action="./insertar.php" method="post">
+            <form action="#">
                 <label for="tarea">Introduce la tarea</label><br><br>
                 <input type="text" id="tarea" name="tarea"><br><br>
-                <button id="boton_agregar" type="submit">Agregar Tarea</button>
+                <button id="boton_agregar"  type="submit">Agregar Tarea</button>
             </form>
         </article>
 
@@ -44,8 +44,6 @@
                         echo "<p>".$fila["tarea"]."</p>";
                         $fila=$res->fetch_assoc();
                     }
-
-                    
                 ?>
         </article>
 

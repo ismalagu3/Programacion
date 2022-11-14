@@ -18,7 +18,10 @@ $(function(){
             $("#ver").addClass("deshabilitado").removeClass("habilitado")
             $("#boton_agregar").on("click", function(e){
                 event.preventDefault()
+                let tarea = $("#tarea").val()
+                $.post("insertar.php",{tarea:tarea})
                 $("#tarea").val("")
+                $(location).attr('href','./principal.php');
             })
         }
         else{
