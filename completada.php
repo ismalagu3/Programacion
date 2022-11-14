@@ -5,4 +5,5 @@ function completar($usuario){
     $res=$mysqli->query("UPDATE tarea SET completada='yes' where tarea='$texto'");
 }
 
+//revisar conexión con la bbdd y la consulta realizada
 ?>
