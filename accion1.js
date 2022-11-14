@@ -21,7 +21,12 @@ $(function(){
                 let tarea = $("#tarea").val()
                 $.post("insertar.php",{tarea:tarea})
                 $("#tarea").val("")
-                $(location).attr('href','./principal.php');
+
+                setInterval(redireccion(),2000)
+                
+                function redireccion(){
+                    $(location).attr('href','./principal.php')
+                }
             })
         }
         else{
