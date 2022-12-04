@@ -1,0 +1,37 @@
+:root{
+    background-color: gray;
+    color:white;
+    text-align: center;
+
+}
+
+main{
+    padding: 1%;
+}
+
+article{
+    margin: 10% auto;
+    padding: 3%;
+    width: 70%;
+    border: 1px solid white;
+}
+
+input{
+    width: 90%;
+}
+
+.deshabilitado{
+    display: none;
+}
+
+.habilitado{    
+    display: block;
+}
+
+#ver>p{
+    border: solid 2px white;
+}
+
+div{
+    display: none;
+}
