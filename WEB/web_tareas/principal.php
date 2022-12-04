@@ -26,20 +26,25 @@
     </main>
 
     <section id="centro">
-        <div id="insertar" class="deshabilitado">
+        <article id="insertar" class="deshabilitado">
             <form action="#">
                 <label for="tarea">Introduce la tarea</label><br><br>
                 <input type="text" id="tarea" name="tarea"><br><br>
-                <button id="boton_agregar">Agregar Tarea</button>
+                <button id="boton_agregar"  type="submit">Agregar Tarea</button>
             </form>
+        </article>
+
+        <article id="ver" class="deshabilitado">
+                <?php
+                    $mysqli=new mysqli("sql7.freemysqlhosting.net","sql7564092","SlyBea9HlB","sql7564092");
+                    $res=$mysqli->query("select tarea from tarea where completada like ''");
+                    $fila=$res->fetch_assoc();
+
         </div>
 
-        <div id="ver" class="deshabilitado">
-
-        </div>
     </section>
 
-<script src="./jquery.js"></script>
+<script src="../jquery.js"></script>
 <script src="./accion1.js"></script>
 </body>
 </html>
