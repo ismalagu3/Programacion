@@ -1,0 +1,71 @@
+*{
+    text-align: center;
+}
+
+header{
+    text-align: center;
+    font-size: 100px;
+    padding: 5%;
+    color:darkred;
+    width: auto;
+    height: auto;
+}
+
+body {
+    margin: 0 10%;
+    background-color:lightslategrey;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: justify;
+    width: auto;
+    height: auto;
+}
+
+menu{
+    font-weight: bold;
+    text-align:center;
+}
+
+section {
+    clear: both;
+    overflow: auto;
+    margin: 40px;
+    padding: 30px 40px;
+    background-color:lightgray
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    background-color: gold;
+}
+
+img{
+    max-width: 50%;
+}
+
+#central{
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h3{
+    text-align: center;
+}
+
+footer > address{
+    color: white;
+}
+
+footer{
+    background-color:darkorange;
+    border: solid black 12px;
+    padding-top: 100px;
+    margin: 100px;
+}
+
+div > p+p{
+    color: white;
+}
